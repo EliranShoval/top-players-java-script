@@ -1,0 +1,133 @@
+//FONTS
+$fontSizeP:14px;
+$fontSizeT:60px;
+$fontSizeBtn:13px;
+$fontWeightTitle:600;
+$fontWeightText:300;
+$fontFamily:'Poppins',
+sans-serif;
+$fontWeightBtn:bold;
+$fontTitleCard:30px;
+
+//COLOR
+$colorText:white;
+$colorBtn:black;
+$backgorundCard:black;
+$backgroundBtn:white;
+
+//ELEMENTS
+$heightForTopSection:300px;
+$widthCard:260px;
+$heightCard:500px;
+$borderCard: 5px solid darkgray;
+$flexSection:flex;
+$imgSizeWit:200px;
+$imgSizeHei:130px;
+$paddingBtn:10px 30px;
+$borderRadiusBtn:5px;
+$paddingFlexTemplate:30px;
+$paddingBody:0;
+$marginBody:0;
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+body {
+    font-family: $fontFamily;
+    margin: $paddingBody;
+    padding: $marginBody;
+}
+
+.top-section-color {
+    height: $heightForTopSection;
+    background: rgb(30, 172, 79);
+    background: linear-gradient(90deg, rgba(30, 172, 79, 1) 14%, rgba(21, 97, 20, 1) 100%);
+    display: $flexSection;
+    align-items: center;
+    color: $colorText;
+    justify-content: center;
+
+    h1 {
+        margin: 0;
+        padding: 10px;
+        font-size: $fontSizeT;
+        font-weight: $fontWeightTitle;
+    }
+}
+
+.flex-template {
+    display: $flexSection;
+    justify-content: center;
+    padding: $paddingFlexTemplate;
+    flex-wrap: wrap;
+
+    .card,
+    .card-player {
+        width: $widthCard;
+        border: $borderCard;
+        margin: 10px;
+        padding: 30px;
+        background: $backgorundCard;
+        text-align: justify;
+        color: $colorText;
+        font-weight: $fontWeightText;
+
+        img {
+            width: $imgSizeWit;
+            height: $imgSizeHei;
+        }
+
+        h2 {
+            font-size: $fontTitleCard;
+
+        }
+
+        p {
+            font-size: $fontSizeP;
+            padding-bottom: 20px;
+            word-spacing: -1px;
+        }
+
+        a,
+        button {
+            padding: $paddingBtn;
+            // background: $backgroundBtn;
+            background: rgb(30, 172, 79);
+            background: linear-gradient(90deg, rgba(30, 172, 79, 1) 14%, rgba(21, 97, 20, 1) 100%);
+            text-decoration: none;
+            color: $colorText;
+            border-radius: $borderRadiusBtn;
+            font-size: $fontSizeBtn;
+            font-weight: $fontWeightBtn;
+
+        }
+    }
+
+    .card {
+        p {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            /* number of lines to show */
+            line-clamp: 2;
+            -webkit-box-orient: vertical;
+            padding-bottom: 0;
+        }
+
+        a {
+            margin-top: 20px;
+        }
+    }
+}
+
+.footer {
+    background: #313131;
+    width: 100%;
+
+    p {
+        padding: 30px;
+        margin: 0;
+        color: $colorText;
+        text-align: center;
+    }
+}
